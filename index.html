@@ -5,27 +5,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Engineering Portfolio</title>
+<title>Mechanical Portfolio</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Segoe UI",sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
 }
-
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
-
 
 body{
 
-    color:white;
-    background:#050505;
+background:#080808;
+color:white;
+overflow-x:hidden;
 
 }
 
@@ -43,30 +42,80 @@ height:100%;
 
 background:
 linear-gradient(
-rgba(3,7,18,.75),
-rgba(3,7,18,.95)
+rgba(0,0,0,.75),
+rgba(0,0,0,.9)
 ),
-
-url("https://images.unsplash.com/photo-1581092160607-ee22621dd758");
+url("https://images.unsplash.com/photo-1581094794329-c8112a89af12");
 
 background-size:cover;
 
 background-position:center;
 
+z-index:-2;
+
+}
+
+
+/* Gear animation */
+
+
+.gear{
+
+position:fixed;
+
+font-size:200px;
+
+color:rgba(255,170,0,.08);
+
 z-index:-1;
+
+animation:rotate 20s linear infinite;
 
 }
 
 
 
-/* Navigation */
+.gear.one{
+
+top:100px;
+
+left:5%;
+
+}
+
+
+.gear.two{
+
+bottom:50px;
+
+right:5%;
+
+animation-direction:reverse;
+
+}
+
+
+
+@keyframes rotate{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+
+
+/* Navbar */
 
 
 nav{
 
 position:fixed;
-
-top:0;
 
 width:100%;
 
@@ -76,20 +125,19 @@ display:flex;
 
 justify-content:space-between;
 
-align-items:center;
+background:rgba(0,0,0,.5);
 
-background:rgba(0,0,0,.35);
-
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 
 z-index:10;
 
 }
 
 
+
 .logo{
 
-font-size:25px;
+font-size:26px;
 
 font-weight:bold;
 
@@ -105,11 +153,10 @@ color:white;
 
 text-decoration:none;
 
-margin-left:25px;
-
-transition:.3s;
+margin-left:20px;
 
 }
+
 
 
 nav a:hover{
@@ -117,6 +164,7 @@ nav a:hover{
 color:#f59e0b;
 
 }
+
 
 
 
@@ -137,7 +185,15 @@ text-align:center;
 
 padding:20px;
 
-animation:show 1.5s;
+animation:intro 1.5s;
+
+}
+
+
+
+.hero h2{
+
+color:#f59e0b;
 
 }
 
@@ -153,24 +209,43 @@ margin:20px 0;
 
 
 
-.hero h2{
+.hero p{
 
-color:#f59e0b;
+max-width:700px;
 
-font-weight:400;
+color:#ccc;
+
+line-height:1.8;
 
 }
 
 
-.hero p{
 
-max-width:650px;
+.profile{
 
-margin:auto;
+width:180px;
 
-color:#ddd;
+height:180px;
 
-line-height:1.8;
+border-radius:50%;
+
+border:5px solid #f59e0b;
+
+object-fit:cover;
+
+box-shadow:0 0 40px #f59e0b;
+
+animation:float 3s infinite;
+
+}
+
+
+
+@keyframes float{
+
+50%{
+transform:translateY(-15px);
+}
 
 }
 
@@ -180,7 +255,7 @@ line-height:1.8;
 
 display:inline-block;
 
-margin-top:35px;
+margin-top:30px;
 
 padding:14px 40px;
 
@@ -188,26 +263,18 @@ background:#f59e0b;
 
 color:#111;
 
-font-weight:bold;
-
 text-decoration:none;
 
-border-radius:5px;
+font-weight:bold;
 
-transition:.3s;
-
-}
-
-
-.btn:hover{
-
-background:white;
+border-radius:30px;
 
 }
 
 
 
-/* Sections */
+
+/* Section */
 
 
 section{
@@ -238,17 +305,13 @@ background:
 
 rgba(255,255,255,.08);
 
-border:
-
-1px solid rgba(255,255,255,.15);
-
-backdrop-filter:blur(15px);
-
+border:1px solid rgba(255,255,255,.15);
 
 padding:35px;
 
-border-radius:15px;
+border-radius:20px;
 
+backdrop-filter:blur(15px);
 
 opacity:0;
 
@@ -280,7 +343,7 @@ color:#ddd;
 
 
 
-/* Projects */
+/* Project */
 
 
 .projects{
@@ -288,8 +351,7 @@ color:#ddd;
 display:grid;
 
 grid-template-columns:
-
-repeat(auto-fit,minmax(260px,1fr));
+repeat(auto-fit,minmax(250px,1fr));
 
 gap:25px;
 
@@ -301,16 +363,13 @@ gap:25px;
 
 background:rgba(255,255,255,.08);
 
-border:
-
-1px solid rgba(255,255,255,.15);
-
-
 padding:30px;
 
-border-radius:15px;
+border-radius:20px;
 
 transition:.4s;
+
+border:1px solid transparent;
 
 }
 
@@ -336,14 +395,6 @@ margin-bottom:15px;
 
 
 
-.card p{
-
-color:#ddd;
-
-line-height:1.7;
-
-}
-
 
 
 /* Contact */
@@ -352,16 +403,6 @@ line-height:1.7;
 .contact{
 
 text-align:center;
-
-}
-
-
-
-.contact p{
-
-margin:15px;
-
-color:#ddd;
 
 }
 
@@ -376,16 +417,16 @@ text-align:center;
 
 padding:25px;
 
-background:#020617;
+background:#020202;
 
 }
 
 
 
-/* Animation */
+/* Intro */
 
 
-@keyframes show{
+@keyframes intro{
 
 from{
 
@@ -410,6 +451,13 @@ opacity:1;
 
 @media(max-width:700px){
 
+.hero h1{
+
+font-size:35px;
+
+}
+
+
 nav{
 
 flex-direction:column;
@@ -421,34 +469,33 @@ nav a{
 
 font-size:14px;
 
-margin:10px;
-
 }
 
 
-.hero h1{
-
-font-size:35px;
-
 }
 
-}
 
 
 </style>
 
-
 </head>
+
 
 
 <body>
 
 
+<div class="gear one">⚙</div>
+
+<div class="gear two">⚙</div>
+
+
 
 <nav>
 
+
 <div class="logo">
-ENGINEER
+MY ENGINEERING
 </div>
 
 
@@ -464,6 +511,7 @@ ENGINEER
 
 </div>
 
+
 </nav>
 
 
@@ -475,8 +523,12 @@ ENGINEER
 <div>
 
 
+<img class="profile"
+src="https://via.placeholder.com/300">
+
+
 <h2>
-Engineering Portfolio
+Mechanical Engineering Portfolio
 </h2>
 
 
@@ -487,15 +539,16 @@ Engineering Portfolio
 
 <p>
 
-วิศวกรผู้มีความสนใจด้านการออกแบบ
-การพัฒนาเทคโนโลยี และการแก้ไขปัญหา
-ด้วยแนวคิดเชิงวิศวกรรม
+สวัสดีครับ ผมเป็นผู้ที่สนใจด้านวิศวกรรม
+การออกแบบ และเทคโนโลยี
+พร้อมเรียนรู้และพัฒนาตัวเอง
+เพื่อสร้างผลงานที่มีคุณค่า
 
 </p>
 
 
-<a class="btn" href="#project">
-ดูผลงาน
+<a class="btn" href="#about">
+รู้จักผมมากขึ้น
 </a>
 
 
@@ -503,6 +556,7 @@ Engineering Portfolio
 
 
 </section>
+
 
 
 
@@ -517,18 +571,17 @@ About Me
 
 <div class="box">
 
-
 <p>
 
-ผมเป็นผู้ที่สนใจในงานวิศวกรรม
-การออกแบบระบบ และการประยุกต์ใช้เทคโนโลยี
-เพื่อสร้างผลงานที่มีประสิทธิภาพ
+ผมมีความสนใจในงานด้านวิศวกรรม
+โดยเฉพาะการออกแบบ การวิเคราะห์ระบบ
+และการแก้ไขปัญหาอย่างเป็นขั้นตอน
 
 <br><br>
 
-แนวทางการทำงานของผมคือ
-การวิเคราะห์ปัญหา วางแผนอย่างเป็นระบบ
-และพัฒนาแนวทางแก้ไขที่สามารถใช้งานจริงได้
+ผมเชื่อว่าหลักการทางวิศวกรรม
+เปรียบเสมือนฟันเฟืองแต่ละชิ้น
+ที่ต้องทำงานร่วมกันเพื่อสร้างระบบที่สมบูรณ์
 
 </p>
 
@@ -546,9 +599,8 @@ About Me
 
 
 <h2 class="title">
-Engineering Projects
+My Projects
 </h2>
-
 
 
 <div class="projects">
@@ -557,12 +609,12 @@ Engineering Projects
 <div class="card">
 
 <h3>
-Project 01
+⚙ Project 01
 </h3>
 
 <p>
-ออกแบบและพัฒนาระบบตัวอย่าง
-เพื่อเพิ่มประสิทธิภาพในการทำงาน
+การออกแบบชิ้นส่วนหรือระบบ
+ด้วยแนวคิดทางวิศวกรรม
 </p>
 
 </div>
@@ -572,28 +624,28 @@ Project 01
 <div class="card">
 
 <h3>
-Project 02
+⚙ Project 02
 </h3>
 
 <p>
-โครงการด้านวิศวกรรม
-ที่เกี่ยวข้องกับการออกแบบและวิเคราะห์
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Project 03
-</h3>
-
-<p>
-ผลงานการประยุกต์ใช้เทคโนโลยี
+การพัฒนาโครงงาน
 เพื่อแก้ไขปัญหาในชีวิตจริง
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+⚙ Project 03
+</h3>
+
+<p>
+ผลงานด้านการออกแบบ
+และสร้างสรรค์นวัตกรรม
 </p>
 
 </div>
@@ -618,21 +670,17 @@ Contact
 
 <div class="box contact">
 
-
 <p>
 Email : your@email.com
 </p>
-
 
 <p>
 Phone : 08X-XXX-XXXX
 </p>
 
-
 <p>
 Location : Thailand
 </p>
-
 
 </div>
 
@@ -644,17 +692,16 @@ Location : Thailand
 
 <footer>
 
-Engineering Portfolio © 2026
+⚙ Engineering Portfolio © 2026
 
 </footer>
-
 
 
 
 <script>
 
 
-const boxes=document.querySelectorAll(".box");
+let boxes=document.querySelectorAll(".box");
 
 
 window.addEventListener("scroll",()=>{
@@ -663,13 +710,10 @@ window.addEventListener("scroll",()=>{
 boxes.forEach(box=>{
 
 
-let position=
-
-box.getBoundingClientRect().top;
+let top=box.getBoundingClientRect().top;
 
 
-
-if(position < window.innerHeight-100){
+if(top < window.innerHeight-100){
 
 box.classList.add("show");
 
@@ -683,7 +727,6 @@ box.classList.add("show");
 
 
 </script>
-
 
 
 </body>
