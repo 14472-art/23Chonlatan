@@ -27,79 +27,85 @@ body{
 }
 
 
-/* พื้นหลังฟันเฟือง */
+/* พื้นหลังเครื่องจักร */
 
 body::before{
 
-content:"";
+    content:"";
 
-position:fixed;
+    position:fixed;
 
-inset:0;
+    inset:0;
 
-background:
-linear-gradient(
-rgba(0,0,0,.65),
-rgba(0,0,0,.9)
-),
-url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492");
+    background:
+    linear-gradient(
+    rgba(0,0,0,.70),
+    rgba(0,0,0,.92)
+    ),
+    url("https://images.unsplash.com/photo-1581092160607-ee22621dd758");
 
-background-size:cover;
+    background-size:cover;
 
-background-position:center;
+    background-position:center;
 
-z-index:-2;
+    background-attachment:fixed;
+
+    z-index:-2;
 
 }
 
 
 
-/* ฟันเฟืองลอย */
+/* ฟันเฟือง */
 
 .gear{
 
-position:fixed;
+    position:fixed;
 
-font-size:220px;
+    font-size:240px;
 
-color:rgba(245,158,11,.12);
+    color:rgba(245,158,11,.13);
 
-z-index:-1;
+    text-shadow:
+    0 0 30px rgba(245,158,11,.4);
 
-animation:spin 25s linear infinite;
+    z-index:-1;
+
+    animation:rotate 25s linear infinite;
 
 }
 
 
 .gear1{
 
-top:80px;
+    top:70px;
 
-left:5%;
+    left:5%;
 
 }
 
 
 .gear2{
 
-bottom:50px;
+    bottom:50px;
 
-right:5%;
+    right:5%;
 
-animation-direction:reverse;
+    animation-direction:reverse;
 
 }
 
 
-@keyframes spin{
 
-from{
-transform:rotate(0deg);
-}
+@keyframes rotate{
 
-to{
-transform:rotate(360deg);
-}
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
 
 }
 
@@ -107,79 +113,82 @@ transform:rotate(360deg);
 
 /* Navbar */
 
+
 nav{
 
-position:fixed;
+    position:fixed;
 
-top:0;
+    top:0;
 
-width:100%;
+    width:100%;
 
-padding:20px 10%;
+    padding:20px 10%;
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:center;
+    align-items:center;
 
-background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,.45);
 
-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
 
-z-index:10;
+    z-index:10;
 
 }
 
 
 .logo{
 
-font-size:25px;
+    font-size:25px;
 
-font-weight:bold;
+    font-weight:bold;
 
-color:#f59e0b;
+    color:#f59e0b;
 
 }
 
 
 nav a{
 
-color:white;
+    color:white;
 
-text-decoration:none;
+    text-decoration:none;
 
-margin-left:25px;
+    margin-left:25px;
+
+    transition:.3s;
 
 }
 
 
 nav a:hover{
 
-color:#f59e0b;
+    color:#f59e0b;
 
 }
 
 
 
+/* Home */
 
-/* หน้าแรก */
 
 .hero{
 
-height:100vh;
+    height:100vh;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-text-align:center;
+    text-align:center;
 
-padding:20px;
+    padding:20px;
 
-animation:intro 1.5s;
+    animation:intro 1.5s;
 
 }
 
@@ -187,30 +196,32 @@ animation:intro 1.5s;
 
 .profile{
 
-width:190px;
+    width:190px;
 
-height:190px;
+    height:190px;
 
-border-radius:50%;
+    border-radius:50%;
 
-object-fit:cover;
+    object-fit:cover;
 
-border:5px solid #f59e0b;
+    border:5px solid #f59e0b;
 
-box-shadow:0 0 40px #f59e0b;
+    box-shadow:
+    0 0 40px #f59e0b;
 
-animation:float 3s infinite;
+    animation:float 3s infinite;
 
 }
+
 
 
 @keyframes float{
 
-50%{
+    50%{
 
-transform:translateY(-15px);
+        transform:translateY(-15px);
 
-}
+    }
 
 }
 
@@ -218,9 +229,9 @@ transform:translateY(-15px);
 
 .hero h2{
 
-margin-top:20px;
+    color:#f59e0b;
 
-color:#f59e0b;
+    margin-top:20px;
 
 }
 
@@ -228,9 +239,9 @@ color:#f59e0b;
 
 .hero h1{
 
-font-size:50px;
+    font-size:50px;
 
-margin:15px;
+    margin:15px;
 
 }
 
@@ -238,11 +249,11 @@ margin:15px;
 
 .hero p{
 
-max-width:650px;
+    max-width:700px;
 
-color:#ddd;
+    color:#ddd;
 
-line-height:1.8;
+    line-height:1.8;
 
 }
 
@@ -250,45 +261,55 @@ line-height:1.8;
 
 .btn{
 
-display:inline-block;
+    display:inline-block;
 
-margin-top:30px;
+    margin-top:30px;
 
-padding:14px 40px;
+    padding:14px 40px;
 
-background:#f59e0b;
+    background:#f59e0b;
 
-color:#111;
+    color:#111;
 
-text-decoration:none;
+    text-decoration:none;
 
-font-weight:bold;
+    font-weight:bold;
 
-border-radius:30px;
+    border-radius:30px;
+
+    transition:.3s;
 
 }
 
+
+.btn:hover{
+
+    background:white;
+
+}
 
 
 
 /* Section */
 
+
 section{
 
-padding:100px 10%;
+    padding:100px 10%;
 
 }
 
 
+
 .title{
 
-text-align:center;
+    text-align:center;
 
-font-size:38px;
+    font-size:38px;
 
-color:#f59e0b;
+    color:#f59e0b;
 
-margin-bottom:50px;
+    margin-bottom:50px;
 
 }
 
@@ -296,40 +317,43 @@ margin-bottom:50px;
 
 .box{
 
-background:rgba(255,255,255,.08);
+    background:
 
-border:1px solid rgba(255,255,255,.2);
+    rgba(255,255,255,.08);
 
-padding:35px;
+    border:
 
-border-radius:20px;
+    1px solid rgba(255,255,255,.15);
 
-backdrop-filter:blur(15px);
+    padding:35px;
 
-opacity:0;
+    border-radius:20px;
 
-transform:translateY(50px);
+    backdrop-filter:blur(15px);
 
-transition:.8s;
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:.8s;
 
 }
 
 
 .box.show{
 
-opacity:1;
+    opacity:1;
 
-transform:none;
+    transform:translateY(0);
 
 }
 
 
-
 .box p{
 
-line-height:2;
+    color:#ddd;
 
-color:#ddd;
+    line-height:2;
 
 }
 
@@ -340,38 +364,40 @@ color:#ddd;
 
 .projects{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
 
-gap:25px;
+    gap:25px;
 
 }
-
 
 
 .card{
 
-background:rgba(255,255,255,.08);
+    background:
 
-padding:30px;
+    rgba(255,255,255,.08);
 
-border-radius:20px;
+    border:
 
-border:1px solid transparent;
+    1px solid rgba(255,255,255,.15);
 
-transition:.4s;
+    padding:30px;
+
+    border-radius:20px;
+
+    transition:.4s;
 
 }
 
 
-
 .card:hover{
 
-transform:translateY(-10px);
+    transform:translateY(-10px);
 
-border-color:#f59e0b;
+    border-color:#f59e0b;
 
 }
 
@@ -379,9 +405,18 @@ border-color:#f59e0b;
 
 .card h3{
 
-color:#f59e0b;
+    color:#f59e0b;
 
-margin-bottom:15px;
+    margin-bottom:15px;
+
+}
+
+
+.card p{
+
+    color:#ddd;
+
+    line-height:1.7;
 
 }
 
@@ -392,78 +427,97 @@ margin-bottom:15px;
 
 .contact{
 
-text-align:center;
+    text-align:center;
 
 }
-
 
 
 .contact p{
 
-margin:15px;
+    margin:15px;
+
+    color:#ddd;
 
 }
+
 
 
 /* Footer */
 
+
 footer{
 
-text-align:center;
+    text-align:center;
 
-padding:25px;
+    padding:25px;
 
-background:#020202;
+    background:#020202;
 
 }
 
 
 
-/* เปิดหน้า */
+/* Animation */
+
 
 @keyframes intro{
 
-from{
+    from{
 
-opacity:0;
+        opacity:0;
 
-transform:translateY(40px);
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
 
 }
 
-to{
-
-opacity:1;
-
-}
-
-}
 
 
+/* Mobile */
 
-/* มือถือ */
 
 @media(max-width:700px){
 
+
 nav{
 
-flex-direction:column;
+    flex-direction:column;
 
 }
+
 
 nav a{
 
-font-size:14px;
+    font-size:14px;
+
+    margin:10px;
 
 }
+
 
 .hero h1{
 
-font-size:35px;
+    font-size:35px;
 
 }
 
+
+.gear{
+
+    font-size:150px;
+
 }
+
+
+}
+
 
 </style>
 
@@ -528,8 +582,9 @@ Mechanical Engineering Portfolio
 
 สวัสดีครับ ผมเป็นผู้ที่สนใจด้านวิศวกรรม
 การออกแบบ และเทคโนโลยี
-พร้อมพัฒนาตัวเองเพื่อสร้างผลงาน
-ที่สามารถนำไปใช้งานจริง
+
+ผมมีความตั้งใจพัฒนาตนเอง
+เพื่อสร้างผลงานที่สามารถนำไปใช้จริง
 
 </p>
 
@@ -547,6 +602,7 @@ Mechanical Engineering Portfolio
 
 
 
+
 <section id="about">
 
 
@@ -557,22 +613,26 @@ About Me
 
 <div class="box">
 
+
 <p>
 
-ผมมีความสนใจด้านวิศวกรรม
-การออกแบบระบบ และการวิเคราะห์ปัญหา
+ผมสนใจด้านวิศวกรรม การออกแบบระบบ
+และการพัฒนาเทคโนโลยี
 
 <br><br>
 
-ผมเชื่อว่าฟันเฟืองทุกชิ้น
+ผมเชื่อว่าฟันเฟืองแต่ละชิ้น
 มีความสำคัญต่อระบบทั้งหมด
+
 เช่นเดียวกับการทำงานของวิศวกร
-ที่ต้องใช้ความละเอียดและความคิดสร้างสรรค์
+ที่ต้องใช้ความคิดสร้างสรรค์
+ความแม่นยำ และการทำงานร่วมกัน
 
 </p>
 
 
 </div>
+
 
 </section>
 
@@ -584,7 +644,7 @@ About Me
 
 
 <h2 class="title">
-Projects
+My Projects
 </h2>
 
 
@@ -593,11 +653,13 @@ Projects
 
 <div class="card">
 
-<h3>⚙ Project 01</h3>
+<h3>
+⚙ Project 01
+</h3>
 
 <p>
-โครงงานออกแบบและพัฒนาชิ้นส่วน
-ทางวิศวกรรม
+การออกแบบชิ้นส่วน
+และระบบทางวิศวกรรม
 </p>
 
 </div>
@@ -605,11 +667,13 @@ Projects
 
 <div class="card">
 
-<h3>⚙ Project 02</h3>
+<h3>
+⚙ Project 02
+</h3>
 
 <p>
-การสร้างแนวคิดและแก้ไขปัญหา
-ด้วยกระบวนการวิศวกรรม
+การพัฒนาโครงงาน
+เพื่อแก้ปัญหาในชีวิตจริง
 </p>
 
 </div>
@@ -617,11 +681,13 @@ Projects
 
 <div class="card">
 
-<h3>⚙ Project 03</h3>
+<h3>
+⚙ Project 03
+</h3>
 
 <p>
-ผลงานด้านนวัตกรรม
-และการประยุกต์ใช้เทคโนโลยี
+การประยุกต์ใช้เทคโนโลยี
+และนวัตกรรม
 </p>
 
 </div>
@@ -646,16 +712,27 @@ Contact
 
 <div class="box contact">
 
-<p>Email : your@email.com</p>
 
-<p>Phone : 08X-XXX-XXXX</p>
+<p>
+Email : your@email.com
+</p>
 
-<p>Location : Thailand</p>
+
+<p>
+Phone : 08X-XXX-XXXX
+</p>
+
+
+<p>
+Location : Thailand
+</p>
+
 
 </div>
 
 
 </section>
+
 
 
 
@@ -667,16 +744,22 @@ Contact
 
 
 
+
 <script>
 
-const boxes=document.querySelectorAll(".box");
+
+const boxes =
+document.querySelectorAll(".box");
 
 
 window.addEventListener("scroll",()=>{
 
+
 boxes.forEach(box=>{
 
-let top=box.getBoundingClientRect().top;
+
+let top =
+box.getBoundingClientRect().top;
 
 
 if(top < window.innerHeight-100){
@@ -685,9 +768,12 @@ box.classList.add("show");
 
 }
 
-});
 
 });
+
+
+});
+
 
 </script>
 
