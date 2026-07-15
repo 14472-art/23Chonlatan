@@ -74,40 +74,20 @@
 }
 
 .label{
-    min-width:220px;
-    padding:12px 18px;
+    width:170px;
+    padding:10px 15px;
 
-    background:linear-gradient(135deg,#f59e0b,#ffcc33);
+    background:#f59e0b;
     color:#111;
 
+    border-radius:8px;
     font-weight:bold;
-    font-size:18px;
 
-    border-radius:12px;
+    border:1px solid #ffd166;
 
-    border:2px solid #f59e0b;
-
-    box-shadow:0 0 15px rgba(245,158,11,.5);
+    box-shadow:none;
 
     text-align:center;
-}
-
-.value{
-    flex:1;
-
-    padding:12px 20px;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:12px;
-
-    font-size:18px;
-
-    color:#fff;
-
-    line-height:1.8;
 }
 
 @media(max-width:768px){
