@@ -71,6 +71,28 @@
 
 }
 
+.timeline-icon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:4px;
+
+    height:80px;
+
+    background:#ffb300;
+
+    left:50%;
+
+    top:100%;
+
+    transform:translateX(-50%);
+
+    border-radius:10px;
+
+}
+
 .timeline-card{
 
     margin-left:35px;
