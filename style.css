@@ -586,29 +586,26 @@ nav a{
 }
 
 .label{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    width: 170px;      /* ความกว้าง */
-    height: 54px;      /* ความสูง */
+    width:140px;
+    height:42px;
 
-    background: linear-gradient(90deg,#ffb000,#ffd24d);
+    background:#f59e0b;   /* สีเหลืองเดียวกับเว็บ */
 
     color:#111;
-    font-size:18px;
-    font-weight:700;
+    font-size:15px;
+    font-weight:bold;
 
-    border-radius:30px;    /* ทำให้มน */
+    border-radius:999px;
 
-    border:2px solid rgba(255,255,255,.35);
+    border:2px solid #ffc94d;
 
-    box-shadow:
-        0 6px 15px rgba(255,180,0,.25);
+    box-shadow:0 0 12px rgba(245,158,11,.5);
 
-    padding:0 18px;
-
-    text-align:center;
+    padding:0;
 }
 
 @media(max-width:768px){
