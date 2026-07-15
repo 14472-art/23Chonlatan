@@ -1,3 +1,513 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* พื้นหลังเครื่องจักร */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.70),
+    rgba(0,0,0,.92)
+    ),
+    url("images/IMG_0961.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    z-index:-2;
+
+}
+
+
+
+/* ฟันเฟือง */
+
+.gear{
+
+    position:fixed;
+
+    font-size:240px;
+
+    color:rgba(245,158,11,.13);
+
+    text-shadow:
+    0 0 30px rgba(245,158,11,.4);
+
+    z-index:-1;
+
+    animation:rotate 25s linear infinite;
+
+}
+
+
+.gear1{
+
+    top:70px;
+
+    left:5%;
+
+}
+
+
+.gear2{
+
+    bottom:50px;
+
+    right:5%;
+
+    animation-direction:reverse;
+
+}
+
+
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+
+/* Navbar */
+
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    padding:20px 10%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
+    z-index:10;
+
+}
+
+
+.logo{
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    color:#f59e0b;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:25px;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    color:#f59e0b;
+
+}
+
+
+
+/* Home */
+
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    animation:intro 1.5s;
+
+}
+
+
+
+.profile{
+
+    width:190px;
+
+    height:190px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #f59e0b;
+
+    box-shadow:
+    0 0 40px #f59e0b;
+
+    animation:float 3s infinite;
+
+}
+
+
+
+@keyframes float{
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+.hero h2{
+
+    color:#f59e0b;
+
+    margin-top:20px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:50px;
+
+    margin:15px;
+
+}
+
+
+
+.hero p{
+
+    max-width:700px;
+
+    color:#ddd;
+
+    line-height:1.8;
+
+}
+
+
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:14px 40px;
+
+    background:#f59e0b;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    background:white;
+
+}
+
+
+
+/* Section */
+
+
+section{
+
+    padding:100px 10%;
+
+}
+
+
+
+.title{
+
+    text-align:center;
+
+    font-size:38px;
+
+    color:#f59e0b;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.box{
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(15px);
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:.8s;
+
+}
+
+
+.box.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+.box p{
+
+    color:#ddd;
+
+    line-height:2;
+
+}
+
+
+
+/* Project */
+
+
+.projects{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+.card{
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#f59e0b;
+
+}
+
+
+
+.card h3{
+
+    color:#f59e0b;
+
+    margin-bottom:15px;
+
+}
+
+
+.card p{
+
+    color:#ddd;
+
+    line-height:1.7;
+
+}
+
+
+
+/* Contact */
+
+
+.contact{
+
+    text-align:center;
+
+}
+
+
+.contact p{
+
+    margin:15px;
+
+    color:#ddd;
+
+}
+
+
+
+/* Footer */
+
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    background:#020202;
+
+}
+
+
+
+/* Animation */
+
+
+@keyframes intro{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* Mobile */
+
+
+@media(max-width:700px){
+
+
+nav{
+
+    flex-direction:column;
+
+}
+
+
+nav a{
+
+    font-size:14px;
+
+    margin:10px;
+
+}
+
+
+.hero h1{
+
+    font-size:35px;
+
+}
+
+
+.gear{
+
+    font-size:150px;
+
+}
+
+
+}
+
+
 .timeline{
     position: relative;
     margin-left: 120px;
