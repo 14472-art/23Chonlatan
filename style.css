@@ -1,0 +1,137 @@
+.education-section{
+    width:90%;
+    margin:auto;
+    padding:50px 0;
+}
+
+.title{
+    text-align:center;
+    color:#ffb300;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.timeline{
+    position:relative;
+    margin-left:60px;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:25px;
+    top:0;
+    width:4px;
+    height:100%;
+    background:linear-gradient(#ffb300,#ffd54f);
+    border-radius:20px;
+}
+
+.timeline-item{
+    display:flex;
+    align-items:flex-start;
+    margin-bottom:50px;
+    position:relative;
+}
+
+.timeline-icon{
+    width:50px;
+    height:50px;
+    background:#111;
+    color:#ffb300;
+    border:3px solid #ffb300;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    z-index:2;
+    box-shadow:0 0 15px rgba(255,179,0,.5);
+}
+
+.timeline-card{
+
+    margin-left:35px;
+
+    width:700px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    color:#fff;
+
+    transition:.4s;
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 25px rgba(255,179,0,.3);
+
+}
+
+.level{
+
+    color:#ffb300;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+.timeline-card h3{
+
+    font-size:30px;
+
+    margin:8px 0;
+
+    color:white;
+
+}
+
+.timeline-card h4{
+
+    color:#ffd54f;
+
+    margin-bottom:15px;
+
+}
+
+.timeline-card p{
+
+    color:#ddd;
+
+    line-height:1.7;
+
+}
+
+@media(max-width:768px){
+
+.timeline{
+
+margin-left:20px;
+
+}
+
+.timeline-card{
+
+width:calc(100% - 80px);
+
+}
+
+.title{
+
+font-size:30px;
+
+}
+
+}
