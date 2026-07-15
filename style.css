@@ -56,3 +56,42 @@
     padding:25px;
     color:#fff;
 }
+
+.profile-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-row{
+    display:flex;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    padding-bottom:12px;
+}
+
+.label{
+    width:220px;
+    color:#f59e0b;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.value{
+    flex:1;
+    color:#ffffff;
+    line-height:1.8;
+    font-size:18px;
+}
+
+@media(max-width:768px){
+
+.info-row{
+    flex-direction:column;
+    gap:8px;
+}
+
+.label{
+    width:100%;
+}
+
+}
