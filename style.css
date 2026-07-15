@@ -79,15 +79,13 @@
 
     width:4px;
 
-    height:80px;
+    height:90px;
 
     background:#ffb300;
 
-    left:50%;
+    left:calc(50% - 2px);
 
     top:100%;
-
-    transform:translateX(-50%);
 
     border-radius:10px;
 
