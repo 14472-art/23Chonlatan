@@ -16,16 +16,6 @@
     margin-left:60px;
 }
 
-.timeline::before{
-    content:'';
-    position:absolute;
-    left:43px;
-    top:0;
-    width:4px;
-    height:100%;
-    background:linear-gradient(#ffb300,#ffd54f);
-    border-radius:20px;
-}
 
 .timeline-item{
     display:flex;
@@ -77,15 +67,17 @@
 
     position:absolute;
 
-    width:4px;
+    left:50%;
 
-    height:90px;
-
-    background:#ffb300;
-
-    left:calc(50% - 2px);
+    transform:translateX(-50%);
 
     top:100%;
+
+    width:4px;
+
+    height:100px;
+
+    background:#ffb300;
 
     border-radius:10px;
 
