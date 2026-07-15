@@ -1,66 +1,37 @@
-.education-section{
-    width:90%;
-    margin:auto;
-    padding:50px 0;
-}
-
-.title{
-    text-align:center;
-    color:#ffb300;
-    font-size:40px;
-    margin-bottom:50px;
-}
-
 .timeline{
-    position:relative;
-    margin-left:60px;
+    position: relative;
+    margin-left: 60px;
 }
-
 
 .timeline-item{
-    display:flex;
-    align-items:center;
-    margin-bottom:50px;
-    position:relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
 }
 
 .timeline-icon{
+    position: relative;
 
     width:90px;
     height:90px;
 
     border-radius:50%;
-
     overflow:hidden;
 
     border:4px solid #ffb300;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:2;
-
-    box-shadow:0 0 15px rgba(255,179,0,.5);
-
     flex-shrink:0;
 
-    position:relative;
-
+    box-shadow:0 0 15px rgba(255,179,0,.5);
 }
 
 .timeline-icon img{
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
 }
 
+/* เส้นใต้รูป */
 .timeline-icon::after{
 
     content:"";
@@ -68,104 +39,14 @@
     position:absolute;
 
     left:50%;
-
     transform:translateX(-50%);
 
     top:100%;
 
     width:4px;
-
-    height:100px;
+    height:120px;
 
     background:#ffb300;
 
-    border-radius:10px;
-
-}
-
-.timeline-card{
-
-    margin-left:35px;
-
-    width:700px;
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.15);
-
     border-radius:20px;
-
-    padding:25px;
-
-    color:#fff;
-
-    transition:.4s;
-}
-
-.timeline-card:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:0 0 25px rgba(255,179,0,.3);
-
-}
-
-.level{
-
-    color:#ffb300;
-
-    font-size:15px;
-
-    font-weight:bold;
-
-}
-
-.timeline-card h3{
-
-    font-size:30px;
-
-    margin:8px 0;
-
-    color:white;
-
-}
-
-.timeline-card h4{
-
-    color:#ffd54f;
-
-    margin-bottom:15px;
-
-}
-
-.timeline-card p{
-
-    color:#ddd;
-
-    line-height:1.7;
-
-}
-
-@media(max-width:768px){
-
-.timeline{
-
-margin-left:20px;
-
-}
-
-.timeline-card{
-
-width:calc(100% - 80px);
-
-}
-
-.title{
-
-font-size:30px;
-
-}
-
 }
