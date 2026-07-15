@@ -6,16 +6,15 @@
 
 /* เส้นหลัก */
 .timeline::before{
-    content: "";
-    position: absolute;
-    left: 45px;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background: #ffb300;
-    border-radius: 10px;
+    content:"";
+    position:absolute;
+    left:45px;
+    top:45px;      /* เริ่มจากกลางวงกลมแรก */
+    bottom:45px;   /* จบที่กลางวงกลมสุดท้าย */
+    width:4px;
+    background:#ffb300;
+    border-radius:10px;
 }
-
 .timeline-item{
     display:flex;
     align-items:center;
@@ -37,6 +36,7 @@
     align-items:center;
     flex-shrink:0;
     z-index:2;
+    position:relative;   /* เพิ่มบรรทัดนี้ */
 }
 
 .timeline-icon img{
