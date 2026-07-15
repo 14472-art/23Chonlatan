@@ -19,7 +19,7 @@
 .timeline::before{
     content:'';
     position:absolute;
-    left:25px;
+    left:43px;
     top:0;
     width:4px;
     height:100%;
