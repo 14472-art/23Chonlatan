@@ -609,6 +609,20 @@ nav a{
     word-break: break-word;
 }
 
+.info-title{
+    width:220px;
+    min-height:90px;
+    padding:18px 20px;
+}
+
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+
 @media(max-width:768px){
 
 .info-row{
